@@ -1,0 +1,11 @@
+{% extends 'imports.html' %}
+
+{% block 'nav' %}
+
+<form class="ui form" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="submit" name="button">LOGIN</button>
+</form>
+
+{% endblock %}

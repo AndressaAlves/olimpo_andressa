@@ -1,0 +1,43 @@
+{% extends 'nav.html' %}
+
+{% block 'content' %}
+
+<div class="ui clearing segment">
+
+                <form class="ui form" action="feed.html" method="POST">
+
+                    <div class="field">
+
+                        <label>Título da Pergunta</label>
+
+                        <input type="text" name="ask" placeholder="O que te aflinge?" tabindex="0">
+
+                    </div>
+
+                    <div class="field">
+
+                        <label>Descrição do Problema</label>
+
+                        <textarea class="expand" name="details" rows="2"  placeholder="De que forma?" tabindex="0"></textarea>
+
+                    </div>
+
+                    <div class="ui error message"></div>
+
+                    <div class="ui animated right floated primary submit button" tabindex="0">
+
+                        <div class="visible content">Perguntar</div>
+
+                        <div class="hidden content">
+
+                            <i class="add icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+{% endblock %}

@@ -1,5 +1,194 @@
 {% extends "nav.html" %}
 
 {% block 'content' %}
-  <h1>FEED</h1>
+
+
+<div class="ui segments">
+
+    <header class="ui clearing segment">
+
+        <div class="ui right floated floating labeled icon dropdown button">
+
+            <i class="filter icon"></i>
+
+            <span class="text">Filtros</span>
+
+            <div class="menu">
+
+                <div class="header">Filtrar por</div>
+
+                <div class="divider"></div>
+
+                <div class="item">
+
+                    Mais Recentes
+
+                </div>
+
+                <div class="item">
+
+                    Mais Visualizados
+
+                </div>
+
+                <div class="item">
+
+                    Meus Tópicos
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="ui segment">
+
+        <div class="ui large feed">
+
+
+
+            <div class="event">
+
+                <div class="label">
+
+                    <img src="https://semantic-ui.com/images/avatar/small/elliot.jpg">
+
+                </div>
+
+                <div class="content">
+
+                    <div class="summary">
+
+                        <a class="user">Steve Jobs</a> fez uma <a>pergunta</a>
+
+                        <div class="date">1 hora atrás</div>
+
+                    </div>
+
+                    <div class="extra text">
+
+                        Qual o nome do sistema operacional mais sofisticado do mundo?
+
+                    </div>
+
+                    <div class="meta">
+
+                        <a>
+
+                        <i class="comments icon"></i>
+
+                        3 respostas
+
+                    </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="event">
+
+                <div class="label">
+
+                    <img src="https://semantic-ui.com/images/avatar/small/helen.jpg">
+
+                </div>
+
+                <div class="content">
+
+                    <div class="summary">
+
+                        <a class="user">Helen Troy</a> fez uma <a>pergunta</a>
+
+                        <div class="date">7 horas atrás</div>
+
+                    </div>
+
+                    <div class="extra text">
+
+                        Gema, gema, gema, qual o nome da clara do ovo?
+
+                    </div>
+
+                    <div class="meta">
+
+                        <a>
+
+                        <i class="comments icon"></i>
+
+                        7 respostas
+
+                    </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <footer class="ui clearing segment">
+
+        <div class="ui right floated buttons">
+
+            <button class="ui icon disabled button">
+
+                <i class="left chevron icon"></i>
+
+            </button>
+
+            <button class="ui active button">
+
+                1
+
+            </button>
+
+            <button class="ui button">
+
+                2
+
+            </button>
+
+            <button class="ui button">
+
+                3
+
+            </button>
+
+            <button class="ui button">
+
+                4
+
+            </button>
+
+            <button class="ui button">
+
+                5
+
+            </button>
+
+            <button class="ui right icon button">
+
+                <i class="right chevron icon"></i>
+
+            </button>
+
+        </div>
+
+    </footer>
+
+</div>
+
 {% endblock %}
