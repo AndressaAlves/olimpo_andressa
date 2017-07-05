@@ -1,30 +1,43 @@
 {% extends 'nav.html' %}
-
+{% load widget_tweaks %}
 {% block 'content' %}
 
 <div class="ui clearing segment">
 
-                <form class="ui form" action="feed.html" method="POST">
+                <form class="ui form"  method="POST">
+                  {% csrf_token %}
 
-                    <div class="field">
+                  <div class="field">
 
-                        <label>Título da Pergunta</label>
-
-                        <input type="text" name="ask" placeholder="O que te aflinge?" tabindex="0">
+                    <label for="form.body.auto_id">{{form.title.label}}</label>
+                  {% render_field form.title  placeholder="Qual sua  dúvida?" %}
+                  {% for  error in form.title.erros %}
+                    <div class="ui erroor  message">
+                        <div class="header">Atenção!</div>
+                          <p>{{error}}</p>
 
                     </div>
+                  {% endfor %}
+                </div>
 
                     <div class="field">
 
-                        <label>Descrição do Problema</label>
+                      <label for="form.body.auto_id">{{form.body.label}}</label>
+                    {% render_field form.body class="expand" rows="2" placeholder="Conte-me mais" %}
+                    {% for  error in form.body.erros %}
+                      <div class="ui erroor  message">
+                          <div class="header">Atenção!</div>
+                            <p>{{error}}</p>
 
-                        <textarea class="expand" name="details" rows="2"  placeholder="De que forma?" tabindex="0"></textarea>
+                      </div>
+                    {% endfor %}
+
 
                     </div>
 
                     <div class="ui error message"></div>
 
-                    <div class="ui animated right floated primary submit button" tabindex="0">
+                    <button type="submit"  class="ui animated right floated primary submit button" tabindex="0">
 
                         <div class="visible content">Perguntar</div>
 
@@ -34,7 +47,7 @@
 
                         </div>
 
-                    </div>
+                    </button>
 
                 </form>
 

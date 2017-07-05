@@ -1,5 +1,5 @@
 from django.contrib.auth.backends import ModelBackend as BaseModelBackend
-from .models import UserManager
+from .models import User
 
 class ModelBackend(BaseModelBackend):
     def authenticate(self, username = None, password=None):
