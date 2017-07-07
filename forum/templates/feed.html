@@ -83,14 +83,14 @@
 
                         <i class="comments icon"></i>
 
-                        resposta
+                      {{topic.answers}}  respostas
 
                     </a>
                     <a>
 
-                    <i class="comments icon"></i>
+                    <i class="eye icon"></i>
 
-                    visualizações
+                  {{topic.views}}  visualizações
 
                 </a>
                     </div>
@@ -106,55 +106,26 @@
     </div>
 
     <footer class="ui clearing segment">
-
         <div class="ui right floated buttons">
-
-            <button class="ui icon disabled button">
-
+            {% if page_obj.has_previous %}
+              <a href="?page{{page_obj.previous_page_number}}" class="ui icon button">
                 <i class="left chevron icon"></i>
+              </a>
+            {% endif %}
 
-            </button>
+            {% for page in paginator.page_range  %}
+              <a href="?page={{page}}"  class="ui button">
+                {{page}}
+              </a>
+            {% endfor %}
 
-            <button class="ui active button">
-
-                1
-
-            </button>
-
-            <button class="ui button">
-
-                2
-
-            </button>
-
-            <button class="ui button">
-
-                3
-
-            </button>
-
-            <button class="ui button">
-
-                4
-
-            </button>
-
-            <button class="ui button">
-
-                5
-
-            </button>
-
-            <button class="ui right icon button">
-
-                <i class="right chevron icon"></i>
-
-            </button>
-
+            {% if page_obj.has_next %}
+            <a href="?page{{page_obj.next_page_number}}"  class="ui icon button">
+              <i class="right chevron icon"></i>
+            </a>
+            {% endif %}
         </div>
-
     </footer>
-
 </div>
 
 {% endblock %}

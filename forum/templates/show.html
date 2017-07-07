@@ -106,6 +106,15 @@
 
         </div>
 
+        {% if reply.correct %}
+          {% if topic.author == user %}
+            <a href="{% url 'forum:reply_incorrect' reply.pk %}">Cancelar resposta correta</a>
+          {% endif %}
+          <label>Resposta Indicada pelo Autor</label>
+        {% elif topic.author == user %}
+          <a href="{% url 'forum:reply_correct' reply.pk %}">Resposta Correta</a>
+        {% endif %}
+
       </div>
 
       {% empty %}
